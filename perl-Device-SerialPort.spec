@@ -1,7 +1,7 @@
 #
 # Conditional build:
-%bcond_with	tests	# perform "make test"
-
+%bcond_with	tests	# perform "make test" (uses serial port)
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Device
 %define	pnam	SerialPort
@@ -9,7 +9,7 @@ Summary:	Device::SerialPort - Linux/POSIX emulation of Win32::SerialPort functio
 Summary(pl):	Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPort w Linuksie
 Name:		perl-Device-SerialPort
 Version:	1.000002
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -32,9 +32,13 @@ Win32::SerialPort.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
+# hack device test
+%{__perl} -pi -e 's/^    print "\\tchecking.*$/\$file="\$test"; last;/' Makefile.PL
+
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+	INSTALLDIRS=vendor \
+	TESTPORT="/dev/ttyS1"
 %{__make}
 
 %{?with_tests:%{__make} test}
@@ -55,7 +59,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Change* README TODO
 %attr(755,root,root) %{_bindir}/modemtest
-%{perl_vendorarch}/%{pdir}/*.pm
-%{perl_vendorarch}/auto/%{pdir}/%{pnam}/
+%{perl_vendorarch}/Device/*.pm
+%dir %{perl_vendorarch}/auto/Device/SerialPort
+%{perl_vendorarch}/auto/Device/SerialPort/SerialPort.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Device/SerialPort/SerialPort.so
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
-%{_mandir}/*/*
+%{_mandir}/man[13]/*
