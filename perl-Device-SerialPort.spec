@@ -10,7 +10,8 @@ Summary(pl):	Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPo
 Name:		perl-Device-SerialPort
 Version:	1.000001
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	45a545acee35128ae2017a65e1e96935
