@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* README TODO
-%{_bindir}/modemtest
+%attr(755,root,root) %{_bindir}/modemtest
 %{perl_vendorarch}/%{pdir}/*.pm
 %{perl_vendorarch}/auto/%{pdir}/%{pnam}/
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
