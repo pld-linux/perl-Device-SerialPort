@@ -32,7 +32,7 @@ Win32::SerialPort.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL \
+%{__perl} -MExtUtils::MakeMaker -we 'WriteMakefile(NAME=>"Device::SerialPort")' \
 	INSTALLDIRS=vendor 
 %{__make}
 
@@ -41,7 +41,8 @@ Win32::SerialPort.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
