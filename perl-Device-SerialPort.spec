@@ -8,13 +8,13 @@
 Summary:	Device::SerialPort - Linux/POSIX emulation of Win32::SerialPort functions
 Summary(pl):	Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPort w Linuksie
 Name:		perl-Device-SerialPort
-Version:	1.000001
+Version:	1.000002
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	45a545acee35128ae2017a65e1e96935
+# Source0-md5:	f53db3733679adc5d05d06fa530444b6
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
