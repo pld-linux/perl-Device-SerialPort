@@ -34,7 +34,7 @@ Win32::SerialPort.
 
 %build
 %{__perl} -MExtUtils::MakeMaker -we 'WriteMakefile(NAME=>"Device::SerialPort")' \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{?_with_tests:%{__make} test}
