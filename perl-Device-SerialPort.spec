@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (uses serial port)
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Device
-%define	pnam	SerialPort
+%define		pdir	Device
+%define		pnam	SerialPort
 Summary:	Device::SerialPort - Linux/POSIX emulation of Win32::SerialPort functions
 Summary(pl):	Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPort w Linuksie
 Name:		perl-Device-SerialPort
