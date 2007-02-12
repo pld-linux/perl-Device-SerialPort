@@ -6,7 +6,7 @@
 %define		pdir	Device
 %define		pnam	SerialPort
 Summary:	Device::SerialPort - Linux/POSIX emulation of Win32::SerialPort functions
-Summary(pl):	Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPort w Linuksie
+Summary(pl.UTF-8):   Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPort w Linuksie
 Name:		perl-Device-SerialPort
 Version:	1.002
 Release:	3
@@ -24,9 +24,9 @@ Device::SerialPort module provides an object-based user interface
 essentially identical to the one provided by the Win32::SerialPort
 module.
 
-%description -l pl
-Modu³ Device::SerialPort udostêpnia zorientowany obiektowo interfejs,
-zasadniczo identyczny z interfejsem udostêpnianym przez modu³
+%description -l pl.UTF-8
+ModuÅ‚ Device::SerialPort udostÄ™pnia zorientowany obiektowo interfejs,
+zasadniczo identyczny z interfejsem udostÄ™pnianym przez moduÅ‚
 Win32::SerialPort.
 
 %prep
