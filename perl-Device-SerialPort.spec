@@ -6,7 +6,7 @@
 %define		pdir	Device
 %define		pnam	SerialPort
 Summary:	Device::SerialPort - Linux/POSIX emulation of Win32::SerialPort functions
-Summary(pl.UTF-8):   Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPort w Linuksie
+Summary(pl.UTF-8):	Device::SerialPort - zgodna z POSIX emulacja funcji Win32::SerialPort w Linuksie
 Name:		perl-Device-SerialPort
 Version:	1.002
 Release:	3
