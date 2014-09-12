@@ -61,7 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/modemtest
 %{perl_vendorarch}/Device/*.pm
 %dir %{perl_vendorarch}/auto/Device/SerialPort
-%{perl_vendorarch}/auto/Device/SerialPort/SerialPort.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Device/SerialPort/SerialPort.so
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man[13]/*
